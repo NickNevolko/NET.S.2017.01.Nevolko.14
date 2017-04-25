@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task1_Fibonacci</name>
+    </assembly>
+    <members>
+        <member name="T:Task1_Fibonacci.Task1">
+            <summary>
+            static class that contains a method for the representation a Fibonacci sequence
+            </summary>
+        </member>
+        <member name="M:Task1_Fibonacci.Task1.Fibonacci(System.Int32)">
+            <summary>
+            represents a Fibonacci sequence
+            </summary>
+            <param name="n">indicates how much elements of sequence needs</param>
+            <returns>N elements of the Fibonacci</returns>
+        </member>
+    </members>
+</doc>
