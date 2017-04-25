@@ -16,12 +16,18 @@ namespace Task1_Tests
         int[] arr3 = { 1, 1};
         int[] arr4 = { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144};
         [Test]
-        public void TestMethod()
+        public void Fibonacci_Test()
         {
             Assert.AreEqual(arr1, Fibonacci(5));
             Assert.AreEqual(arr2, Fibonacci(1));
             Assert.AreEqual(arr3, Fibonacci(2));
             Assert.AreEqual(arr4, Fibonacci(12));
+        }
+
+        [Test]
+        public void Fibonacci_ArgumentOutOfRange()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => Fibonacci(-2));
         }
     }
 }
