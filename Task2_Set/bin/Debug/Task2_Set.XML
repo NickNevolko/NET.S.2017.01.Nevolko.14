@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task2_Set</name>
+    </assembly>
+    <members>
+        <member name="T:Task2_Set.Set`1">
+            <summary>
+            represent a generic collection Set
+            </summary>
+            <typeparam name="T">param must be a reference type object</typeparam>
+        </member>
+        <member name="P:Task2_Set.Set`1.Count">
+            <summary>
+            count of elements in set
+            </summary>
+        </member>
+        <member name="M:Task2_Set.Set`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            constructor 
+            </summary>
+            <param name="items">not null enumerable</param>
+            <param name="equalityComparer">rule for checking the equality</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            ctor that takes no enumerables 
+            </summary>
+            <param name="equalityComparer">rule for checking the equality</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            ctor that takes no equalitycomparer
+            </summary>
+            <param name="items">enumerable of items</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.#ctor">
+            <summary>
+            ctor with no any parameters
+            </summary>
+        </member>
+        <member name="P:Task2_Set.Set`1.Item(System.Int32)">
+            <summary>
+            indexer
+            </summary>
+            <param name="i">index</param>
+            <returns>element of set </returns>
+        </member>
+        <member name="M:Task2_Set.Set`1.Add(`0)">
+            <summary>
+            add a unique element in the set
+            </summary>
+            <param name="item">item</param>
+            <returns>true if sucess</returns>
+        </member>
+        <member name="M:Task2_Set.Set`1.Remove(`0)">
+            <summary>
+            removing the element from the set
+            </summary>
+            <param name="item">item</param>
+            <returns>true if sucess</returns>
+        </member>
+        <member name="M:Task2_Set.Set`1.Clear">
+            <summary>
+            clear the set
+            </summary>
+        </member>
+        <member name="M:Task2_Set.Set`1.Contains(`0)">
+            <summary>
+            check does the element contains in the set
+            </summary>
+            <param name="item">item</param>
+            <returns>true if it is</returns>
+        </member>
+        <member name="M:Task2_Set.Set`1.UnionWith(Task2_Set.Set{`0})">
+            <summary>
+            union of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.IntersectWith(Task2_Set.Set{`0})">
+            <summary>
+            the intersection of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.ExceptWith(Task2_Set.Set{`0})">
+            <summary>
+            the exception of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.SymmetricExceptWith(Task2_Set.Set{`0})">
+            <summary>
+            the symmetric exception of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.Union(Task2_Set.Set{`0})">
+            <summary>
+            the union of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.Except(Task2_Set.Set{`0})">
+            <summary>
+            the except of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.Intersect(Task2_Set.Set{`0})">
+            <summary>
+            the intersection of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.SymmetricExcept(Task2_Set.Set{`0})">
+            <summary>
+            the symmetric deifference of the two sets
+            </summary>
+            <param name="other">other set</param>
+        </member>
+        <member name="M:Task2_Set.Set`1.GetEnumerator">
+            <summary>
+             method of interface
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
