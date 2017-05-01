@@ -18,7 +18,7 @@ namespace Task1_Fibonacci
         /// <returns>N elements of the Fibonacci</returns>
         public static IEnumerable<int> Fibonacci(int n)
         {
-            if (n < 0) throw new ArgumentOutOfRangeException(nameof(n));
+            if (n < 0 || n > int.MaxValue) throw new ArgumentOutOfRangeException(nameof(n));
             int item1 = 1;
             int item2 = 1;
             if (n == 1) yield return item1;
