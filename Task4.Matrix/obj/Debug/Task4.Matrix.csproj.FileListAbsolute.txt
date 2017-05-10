@@ -3,3 +3,4 @@ C:\Users\nikol\documents\visual studio 2015\Projects\NET.S.2017.01.Nevolko.14\Ta
 C:\Users\nikol\documents\visual studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task4.Matrix\obj\Debug\Task4.Matrix.csprojResolveAssemblyReference.cache
 C:\Users\nikol\documents\visual studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task4.Matrix\obj\Debug\Task4.Matrix.dll
 C:\Users\nikol\documents\visual studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task4.Matrix\obj\Debug\Task4.Matrix.pdb
+C:\Users\nikol\Documents\Visual Studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task4.Matrix\bin\Debug\Task4.Matrix.XML

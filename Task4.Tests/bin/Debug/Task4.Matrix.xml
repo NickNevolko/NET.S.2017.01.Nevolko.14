@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Task4.Matrix</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "T:Task4.Matrix.DiagonalMatrix`1" -->
+        <member name="T:Task4.Matrix.Matrix`1">
+            <summary>
+            abstract entity of the matrix
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Task4.Matrix.Matrix`1.Size">
+            <summary>
+            size
+            </summary>
+        </member>
+        <member name="P:Task4.Matrix.Matrix`1.Item(System.Int32,System.Int32)">
+            <summary>
+            indexer
+            </summary>
+        </member>
+        <member name="T:Task4.Matrix.SquareMatrix`1">
+            <summary>
+            represents square matrix
+            </summary>
+            <typeparam name="T">type</typeparam>
+        </member>
+        <member name="F:Task4.Matrix.SquareMatrix`1.arr">
+            <summary>
+            array
+            </summary>
+        </member>
+        <member name="M:Task4.Matrix.SquareMatrix`1.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="M:Task4.Matrix.SquareMatrix`1.#ctor(System.Int32)">
+            <summary>
+            ctor
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="M:Task4.Matrix.SquareMatrix`1.#ctor(`0[0:,0:])">
+            <summary>
+            ctor
+            </summary>
+            <param name="arr"></param>
+        </member>
+        <member name="M:Task4.Matrix.SquareMatrix`1.GetEnumerator">
+            <summary>
+            implentation of inumerable t
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Task4.Matrix.SymmetricMatrix`1">
+            <summary>
+            /represents a symmetric square matrix
+            </summary>
+            <typeparam name="T">type</typeparam>
+        </member>
+        <member name="M:Task4.Matrix.SymmetricMatrix`1.#ctor(System.Int32)">
+            <summary>
+            ctor for empty matrix
+            </summary>
+            <param name="size"></param>
+        </member>
+        <member name="M:Task4.Matrix.SymmetricMatrix`1.#ctor(`0[0:,0:])">
+            <summary>
+            ctor 
+            </summary>
+            <param name="arr">array of T</param>
+        </member>
+    </members>
+</doc>

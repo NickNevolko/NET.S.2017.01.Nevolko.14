@@ -15,28 +15,7 @@ namespace Task4.Matrix
         /// <summary>
         /// array
         /// </summary>
-        protected T[,] arr;
-
-        public override T this[int i, int j]
-        {
-            get
-            {
-                if (i < 0 || i > Size)
-                    throw new IndexOutOfRangeException(nameof(i));
-                if (j < 0 || j > Size)
-                    throw new IndexOutOfRangeException(nameof(j));
-                return this.arr[i,j];
-            }
-            set
-            {
-                if (i < 0 || i > Size)
-                    throw new IndexOutOfRangeException(nameof(i));
-                if (j < 0 || j > Size)
-                    throw new IndexOutOfRangeException(nameof(j));
-                this.arr[i, j] = value;
-                OnChange(this, new MatrixChangedEventArgs(i, j));
-            }
-        }
+        private T[,] arr;
 
         #region ctors
 
@@ -88,8 +67,30 @@ namespace Task4.Matrix
             for(int i = 0; i <= Size-1; i++)
                 for (int j = 0; j <= Size-1; j++)
                     yield return arr[i,j];
-            }
         }
         #endregion
+
+        protected override T GetValue(int i, int j)
+        {
+            if (i < 0 || i > Size)
+                throw new ArgumentOutOfRangeException(nameof(i));
+            if (j < 0 || j > Size)
+                throw new ArgumentOutOfRangeException(nameof(j));
+
+            return arr[i, j];
+        }
+
+        protected override void SetValue(int i, int j, T value)
+        {
+            if (i < 0 || i > Size)
+                throw new ArgumentOutOfRangeException(nameof(i));
+            if (j < 0 || j > Size)
+                throw new ArgumentOutOfRangeException(nameof(j));
+            if (ReferenceEquals(value, null))
+                throw new ArgumentNullException(nameof(value));
+
+            arr[i, j] = value;
+        }
+    }
 
 }

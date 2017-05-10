@@ -9,41 +9,15 @@ namespace Task4.Matrix
     /// <summary>
     /// represents a diagonal matrix
     /// </summary> <typeparam name="T">
-    public class DiagonalMatrix<T> : SquareMatrix<T>
+    public class DiagonalMatrix<T> : Matrix<T>
     {
-        /// <summary>
-        /// indexer
-        /// </summary>
-        public override T this[int i, int j]
-        {
-            get
-            {
-                if (i < 0 || i > Size)
-                    throw new IndexOutOfRangeException(nameof(i));
-                if (j < 0 || j > Size)
-                    throw new IndexOutOfRangeException(nameof(j));
-                return this.arr[i, j];
-            }
-            set
-            {
-                if (i < 0 || i > Size)
-                    throw new IndexOutOfRangeException(nameof(i));
-                if (j < 0 || j > Size)
-                    throw new IndexOutOfRangeException(nameof(j));
-                if (i != j)
-                    throw new IndexOutOfRangeException(nameof(i));
-
-                this.arr[i, j] = value;
-                OnChange(this, new MatrixChangedEventArgs(i, j));
-            }
-        }
-
+        T[] arr;
         #region ctors
         public DiagonalMatrix(int size)
         {
             if (size < 0) throw new ArgumentOutOfRangeException(nameof(size));
             Size = size;
-            arr = new T[size, size];
+            arr = new T[size];
         }
 
         public DiagonalMatrix(T[,] arr)
@@ -54,11 +28,46 @@ namespace Task4.Matrix
                 throw new ArgumentException("The length of the columns and rows must be equal");
 
             Size = arr.GetLength(0);
-            this.arr = new T[Size, Size];
+            this.arr = new T[Size];
 
             for (int i = 0; i < Size; i++)
-                    this.arr[i, i] = arr[i, i];
+                    this.arr[i] = arr[i, i];
         }
         #endregion
+
+        protected override T GetValue(int i, int j)
+        {
+            if (i < 0 || i > Size)
+                throw new ArgumentOutOfRangeException(nameof(i));
+            if (j < 0 || j > Size)
+                throw new ArgumentOutOfRangeException(nameof(j));
+            if (i == j)
+                return this.arr[i];
+            else
+                return default(T);
+        }
+
+        protected override void SetValue(int i, int j, T value)
+        {
+            if (i < 0 || i > Size)
+                throw new ArgumentOutOfRangeException(nameof(i));
+            if (j < 0 || j > Size)
+                throw new ArgumentOutOfRangeException(nameof(j));
+            if (ReferenceEquals(value, null))
+                throw new ArgumentNullException(nameof(value));
+
+            if (i == j)
+                this.arr[i] = value;
+        }
+
+        public override IEnumerator<T> GetEnumerator()
+        {
+            foreach (var item in arr)
+            {
+                for (int i = 0; i < Size; i++)
+                    for (int j = 0; j < Size; j++)
+                        yield return this[i, j];
+            }  
+        }
     }
 }

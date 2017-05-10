@@ -1,0 +1,5 @@
+C:\Users\nikol\Documents\Visual Studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task5.BinaryTree\bin\Debug\Task5.BinaryTree.dll
+C:\Users\nikol\Documents\Visual Studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task5.BinaryTree\bin\Debug\Task5.BinaryTree.pdb
+C:\Users\nikol\Documents\Visual Studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task5.BinaryTree\obj\Debug\Task5.BinaryTree.csprojResolveAssemblyReference.cache
+C:\Users\nikol\Documents\Visual Studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task5.BinaryTree\obj\Debug\Task5.BinaryTree.dll
+C:\Users\nikol\Documents\Visual Studio 2015\Projects\NET.S.2017.01.Nevolko.14\Task5.BinaryTree\obj\Debug\Task5.BinaryTree.pdb

@@ -19,7 +19,25 @@ namespace Task4.Matrix
         public int Size { get; protected set; }
         public event EventHandler<MatrixChangedEventArgs> Change = delegate { };
 
-        public abstract T this[int i, int j] { get; set; }
+        /// <summary>
+        /// indexer
+        /// </summary>
+        public  T this[int i, int j]
+        {
+            get
+            {
+                return GetValue(i, j);
+            }
+
+            set
+            {
+                OnChange(this, new MatrixChangedEventArgs(i, j));
+                SetValue(i, j, value);
+            }
+        }
+
+        protected abstract T GetValue(int i, int j);
+        protected abstract void SetValue(int i, int j, T value);
 
         public void Accept(IVisitor<T> visitor)
         {
